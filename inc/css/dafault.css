@@ -1,0 +1,213 @@
+#desc{
+  background-color: #A2FFC0;
+  padding: 10px;
+  display: inline-block;
+  border: 5px solid #51D489;
+   margin-top: 30px;
+   margin-bottom: 40px;
+}
+
+#titlebar{
+  font-family: 'Fredoka One', cursive;
+  font-size: 45px;
+  margin-top: 50px;
+}
+
+.referal{
+  font-family: 'Righteous', cursive;
+  padding-top: 30px;
+}
+
+.inputamt
+{
+  font-size: 37px;
+  padding-left: 90px;
+}
+
+.inputsize
+{
+  max-width:400px;
+  margin:auto;
+}
+
+.input-icons
+{
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.dollar
+{
+  position: absolute;
+  padding: 0px 10px;
+  min-width: 40px;
+  margin-top: 10px;
+  font-size: normal;
+  color: #000;
+  letter-spacing: 1.5px;
+  margin-top: 20px;
+}
+
+.dollar_two
+{
+  background-color: #2ECC71;
+  color: white;
+  border-radius: 10px;
+}
+
+.texta 
+{
+  font-family: 'Righteous', cursive;
+}
+
+.input_set
+{
+  width: 100%;
+  padding: 15px;
+  font-size: 25px;
+}
+
+.button_sub {
+  border-radius: 10px;
+  background-color: #1aadad;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 17px;
+  font-family: 'PT Sans Caption', sans-serif;
+  padding: 10px;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.button {
+  border-radius: 30px;
+  background-color: #2ECC71;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 22px;
+  font-family: 'PT Sans Caption', sans-serif;
+  padding: 15px;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 20px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.btn {
+  border-radius: 30px;
+  background-color: #fff;
+  color: #1aadad;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'PT Sans Caption', sans-serif;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 20px;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.lbtn {
+  border-radius: 30px;
+  background-color: #fff;
+  border: none;
+  color: #2ecc71;
+  text-align: center;
+  font-size: 22px;
+  font-family: 'PT Sans Caption', sans-serif;
+  padding: 15px;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.lbtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.lbtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.lbtn:hover span {
+  padding-right: 20px;
+}
+
+.lbtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+input[type=text],select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid grey;
+  border-radius: 4px;
+}
