@@ -10,7 +10,7 @@ class Admin_mod extends CI_Model
 
 
 	
-	function create_random_salt() {
+	/*function create_random_salt() {
     
 	    $random = bin2hex(mcrypt_create_iv(32, MCRYPT_DEV_URANDOM));
 	    // $random = uniqid(rand(), true);
@@ -185,7 +185,7 @@ class Admin_mod extends CI_Model
 		}
 		$this->db->where('admin_status','1');
 		return $this->db->count_all_results('admin');		
-	}
+	}*/
 }
 
 

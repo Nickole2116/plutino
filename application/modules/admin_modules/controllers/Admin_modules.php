@@ -55,7 +55,7 @@ class Admin_modules extends MX_Controller
 		$this->form_validation->set_message('required', $this->lang->line('error_msg_required'));
 		$this->form_validation->set_message('max_length', $this->lang->line('error_msg_greater_than') );
 	}
-	function check_alphanumeric($str)
+	/*function check_alphanumeric($str)
 	{
 		
 		$str = $this->input->post("admin_name");
@@ -254,10 +254,10 @@ class Admin_modules extends MX_Controller
     {
         $this->session->unset_userdata('admin_id');
         redirect(ADMINPATH.'/login');
-    } 
+    } */
 
 
-	function p_update(){
+	/*function p_update(){
 
 
 		$data  = array();
@@ -265,14 +265,14 @@ class Admin_modules extends MX_Controller
 		
 		$admin = new $this->admin();
 		
-			/* try to pass value by */
+			/* try to pass value by *//*
 			$admin->admin_id = $this->encrypt->decode($this->input->post("admin_id"));
 			$admin->admin_name = $this->input->post("change_admin_name");
 			$admin->admin_email = $this->input->post("change_admin_email");
 			$admin->admin_role = $this->input->post("change_admin_role");
 	
 			
-		/* need to validate data before update*/
+		/* need to validate data before update*//*
 		
 		$this->validate_form("update");
 			
@@ -282,7 +282,7 @@ class Admin_modules extends MX_Controller
 			 	$data['error'] = 1;
 			 	//echo validation_errors();
 			 }
-			 /* if not error then update */
+			 /* if not error then update *//*
 			 else{
 	
 				$this->db->trans_begin();
@@ -365,7 +365,7 @@ class Admin_modules extends MX_Controller
 		$row = $admin_ajax_result->row();
 		echo $row->admin_name.'||'.$row->admin_email.'||'.$row->admin_role.'||';	
 
-    }
+    }*/
 
 }
 ?>

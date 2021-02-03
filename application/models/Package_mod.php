@@ -3,7 +3,7 @@
 class Package_mod extends CI_Model
 {
 
-	var $package_id =0,
+	/*var $package_id =0,
 		$package_name = "",
 		$package_price = "",
 		//$package_bv = "",
@@ -228,5 +228,5 @@ class Package_mod extends CI_Model
 		//$this->db->where('package_status','1');
 		//return $this->db->get('package')->result_array();
 
-	}
+	}*/
 }

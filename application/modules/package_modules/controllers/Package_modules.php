@@ -61,7 +61,7 @@ class Package_modules extends MX_Controller
 			 $this->form_validation->set_message('required', $this->lang->line('error_msg_required'));
 			 $this->form_validation->set_message('max_length', $this->lang->line('error_msg_greater_than') );
 	}
-	function get()
+	/*function get()
 	{
 		$data ['start'] = $this->package->start = $this->input->get_post ( 'start' );
 		if ($data ['start'] == '')
@@ -307,7 +307,7 @@ class Package_modules extends MX_Controller
 	}
 	function returnAPIURI()
     {
-        /*insert into logs*/
+        /*insert into logs*//*
         $member = new $this->member();
         $rst = json_decode($_GET);
         if($rst['token']!='')
@@ -437,7 +437,7 @@ class Package_modules extends MX_Controller
 	{
 		/*get from table */
 		/* Data should be including no, order_payment_created_date, order_payment_type, order_payment_id, admin_name, 
-		   order_payment_phone_number, order_payment_email, order_payment_usdt_address, order_payment_amount, order_payment_status */
+		   order_payment_phone_number, order_payment_email, order_payment_usdt_address, order_payment_amount, order_payment_status *//*
 		$data ['start'] = $this->mobile->start = $this->input->get_post ( 'start' );
 		if ($data ['start'] == '')
 			$data ['start'] = $this->mobile->start = 0;
@@ -706,7 +706,7 @@ class Package_modules extends MX_Controller
         /*softpin
 			$returnValue['data']['softpin']['TopupCode'];
 			$returnValue['data']['softpin']['TopupSerial'];
-        */
+        *//*
         $this->db->trans_commit();
         return true;
 	}
@@ -814,5 +814,5 @@ class Package_modules extends MX_Controller
         }
         $this->db->trans_commit();
         return true;
-	}
+	}*/
 }
