@@ -21,7 +21,7 @@
 |
 */
 
-define('CRON_CI_INDEX', '/var/www/html/surepay/index.php');    // Your CodeIgniter main index.php file
+define('CRON_CI_INDEX', '/var/www/html/plutinos/index.php');    // Your CodeIgniter main index.php file
 //define('CRON_CI_INDEX', '/var/www/vhosts/myaccount/index.php');   // Your CodeIgniter main index.php file
 define('CRON', TRUE);   // Test for this in your controllers if you only want them accessible via cron
 

@@ -27,7 +27,11 @@ class Member extends MX_Controller{
       $this->session->set_userdata('language_selected', $language_select);
 
     } 
-    function index()
+    public function index()
+    {
+      $this->load->view('welcome_message');
+    }
+    /*function index()
     {
       $phone_credit = $this->package_modules->get_payment_type_list(2);
       $data['phone_ereload_credit'] = $phone_credit;
@@ -130,5 +134,5 @@ class Member extends MX_Controller{
     function test()
     {
       $this->package_modules->check_status_transaction('55728882bcf54751ba7c05724c057ca9','30');
-    }
+    }*/
 }

@@ -31,10 +31,10 @@ switch (ENVIRONMENT)
 		
 		break;
 	case "staging":
-		$config['base_url'] = "https://".$_SERVER['SERVER_NAME']."/surepay/";
+		$config['base_url'] = "https://".$_SERVER['SERVER_NAME']."/plutinos/";
 		break;
 	default:
-		$config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/surepay/';
+		$config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/plutinos/';
 }
 /*
 |--------------------------------------------------------------------------

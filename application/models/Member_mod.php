@@ -3,7 +3,7 @@
 class Member_mod extends CI_Model
 {
 
-	var $member_id =0,
+	/*var $member_id =0,
 		$member_username = "",
 		$member_password = "",
 		$member_security_pin = "",
@@ -878,7 +878,7 @@ class Member_mod extends CI_Model
 		$query = $this->db->update('member_share',$data);
 		
 		*/	
-		return $query;
+		/*return $query;
 		
 		
 	}
@@ -1833,5 +1833,5 @@ function remit_count(){
 		$data= array("member_detail_register_api_oc_status"=>$this->member_detail_register_api_oc_status);
 		$this->db->where('member_detail_memberid',$this->member_detail_memberid);
 		$this->db->update('member_detail',$data);
-	}
+	}*/
 }

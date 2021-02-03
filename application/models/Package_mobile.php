@@ -12,7 +12,7 @@ class Package_mobile extends CI_Model
     $order_payment_amount ="",
     $order_payment_status ="";
 
-  function get_payment_type_list()
+  /*function get_payment_type_list()
   {
     $this->db->where('payment_type_type',$this->payment_type_type);
     return $this->db->get('payment_type')->result_array();
@@ -155,5 +155,5 @@ class Package_mobile extends CI_Model
       $data = array('order_payment_status'=>$this->order_payment_status);
       $this->db->where('order_payment_id',$this->order_payment_id);
       $this->db->update('order_payment',$data);
-    }
+    }*/
 }
