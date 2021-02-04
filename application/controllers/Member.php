@@ -30,6 +30,7 @@ class Member extends MX_Controller{
     public function index()
     {
       $this->load->view('welcome_message');
+      //$this->login();
     }
     /*function index()
     {
@@ -135,4 +136,61 @@ class Member extends MX_Controller{
     {
       $this->package_modules->check_status_transaction('55728882bcf54751ba7c05724c057ca9','30');
     }*/
+
+    public function login()
+    {
+      $data = array();
+      $data['content'] = "member/login";
+      $this->load->view("member/template/default",$data);
+
+    }
+
+    public function p_login()
+    {
+      
+
+    }
+
+    public function forgot_password()
+    {
+
+    }
+
+    public function home()
+    {
+      $data = array();
+      $data['content'] = "member/home";
+      $this->load->view("member/template/default",$data);
+
+    }
+
+    function planet()
+    {
+      $data = array();
+      $data['content'] = "member/planet";
+      $this->load->view("member/template/default",$data);
+
+    }
+
+    function register()
+    {
+      $data = array();
+      $data['content'] = "member/register";
+      $this->load->view("member/template/default",$data);
+
+    }
+
+
+    function p_register()
+    {
+
+    }
+
+    function astronaut()
+    {
+      $data = array();
+      $data['content'] = "member/member_detail";
+      $this->load->view("member/template/default",$data);
+
+    }
 }
