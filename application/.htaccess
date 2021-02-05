@@ -1,6 +1,29 @@
-<IfModule authz_core_module>
-    Require all denied
+Options -Indexes
+Options +FollowSymLinks
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /subfolder/
+
+    #Removes access to the system folder by users.
+    #Additionally this will allow you to create a System.php controller,
+
+    RewriteCond %{REQUEST_URI} ^system.*
+    RewriteRule ^(.*)$ index.php?/$1 [L]
+
+    #When your application folder isn't in the system folder
+
+    RewriteCond %{REQUEST_URI} ^application.*
+    RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+    #Checks to see if the user is attempting to access a valid file,
+    #such as an image or css document, if this isn't true it sends the
+    #request to index.php
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?/$1 [L]
 </IfModule>
-<IfModule !authz_core_module>
-    Deny from all
+<IfModule !mod_rewrite.c>
+    ErrorDocument 404 /index.php
 </IfModule>
+A

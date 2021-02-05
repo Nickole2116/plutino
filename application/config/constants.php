@@ -83,28 +83,3 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
-
-//pagination 
-define("PER_PAGE_LIMIT",10);
-define("DECIMAL_POINT",2);
-
-/*email confiiguration */
-define("WEBSITE_NAME",'Kryptonion');
-
-/*Version css and javascript*/
-define("VERSION", 2.02);
-define("LOGO_VERSION",1.01);
-define("ADMINPATH","tech_krypt");
-define("API_MERCHANT","Kryptonion");
-define("API_KEY","7dd6b2068dd74a9d71b05768f88f45892adc9739");
-
-define("MCASH_API_MERCHANT_LIVE","kryptonion_valley");
-define("MCASH_API_KEY_LIVE","5f435c71c560c");
-define("MCASH_API_URL_LIVE","https://www.mcash.my/cross/");
-define("MCASH_API_MERCHANT","kryptonion_valley2");
-define("MCASH_API_KEY","5f44dfe8246c6");
-define("MCASH_API_URL","http://newbackend.mcash.my/cross/");
-
-define("ADMIN_EMAIL","support@kryptonion.co");
-
-
