@@ -19,8 +19,10 @@ class Welcome extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
-	private function __contruct()
+	function __contruct()
 	{
+		//parent::__contruct();
+		$this->load->model("welcome_mod","welcome");
 		$this->index();
 	}
 	public function index()
@@ -28,9 +30,23 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 
 	}
-	public function journals()
+	public function login()
 	{
-		$this->load->view('welcome_message');
+		$data = array();
+		$data['test'] = "Testing 123";
+		$this->load->view('member/login',$data);
 
+	}
+
+	public function send()
+	{
+		$this->load->model("welcome_mod","welcome");
+
+		$data = array();
+		$data['name'] = $this->input->get('txtname');
+		$welcome = new $this->welcome();
+		$data['array'] = $welcome->all();
+		$this->load->view('member/home',$data);
+		
 	}
 }
