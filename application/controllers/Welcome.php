@@ -24,6 +24,7 @@ class Welcome extends CI_Controller {
 		//parent::__contruct();
 		$this->load->model("welcome_mod","welcome");
 		$this->index();
+		//parent::__contruct();
 	}
 	public function index()
 	{
