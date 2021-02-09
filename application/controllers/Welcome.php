@@ -24,30 +24,109 @@ class Welcome extends CI_Controller {
 		//parent::__contruct();
 		$this->load->model("welcome_mod","welcome");
 		$this->index();
+
 		//parent::__contruct();
 	}
 	public function index()
 	{
 		$this->load->view('welcome_message');
+		$this->output->enable_profiler(TRUE);
+
 
 	}
+	public function test()
+	{
+
+		$data = array();
+		$data['test'] = "Testing 123";
+		$data['test2'] = "Testing 2";
+		$this->load->view('member/login',$data); //CALL VIEW
+
+	}
+
 	public function login()
 	{
 		$data = array();
-		$data['test'] = "Testing 123";
-		$this->load->view('member/login',$data);
+		$this->load->view('member/home',$data);
+		$this->output->enable_profiler(TRUE);
+		
+	}
+
+	public function p_login()
+	{
+		$this->load->model("welcome_mod","welcome");
+
+		$username = $this->input->post('txtusername');
+		$password = $this->input->post('txtpassword');
+
+
+		$data = array();
+		$welcome = new $this->welcome();
+		$credentials = $welcome->p_member_login($username,$password);
+		/**SET SESSION ID */
+		$this->session->set_flashdata('members',$credentials);
+		
+		$this->load->view('member/home',$data);
+		$this->output->enable_profiler(TRUE);
+
+		
+	}
+
+	public function register()
+	{
+		$this->index();
 
 	}
 
-	public function send()
+	public function p_register()
 	{
 		$this->load->model("welcome_mod","welcome");
 
 		$data = array();
-		$data['name'] = $this->input->get('txtname');
+
 		$welcome = new $this->welcome();
-		$data['array'] = $welcome->all();
+		$credentials = $welcome->p_member_register("nickole02","123456");
+		/**SET SESSION ID */
+		$this->session->set_flashdata('members',$credentials);
+		
 		$this->load->view('member/home',$data);
+		$this->output->enable_profiler(TRUE);
+
+		
+	}
+
+
+	/**
+	 * **************************************
+	 * ADMIN LOGIN CONTROLLERS
+	 * **************************************
+	 */
+
+	public function m_login()
+	{
+		$data = array();
+		$this->load->view('admin/login',$data);
+		$this->output->enable_profiler(TRUE);
+		
+	}
+
+	public function admin_login()
+	{
+		$this->load->model("welcome_mod","welcome");
+
+		$username = $this->input->post('txtusername_admin');
+		$password = $this->input->post('txtpassword_admin');
+
+
+		$data = array();
+		$welcome = new $this->welcome();
+		$admin_credentials = $welcome->p_admin_login($username,$password);
+		/**SET SESSION ID */
+		$this->session->set_flashdata('admins',$admin_credentials);
+		
+		$this->load->view('admin/admin_listings',$data);
+		$this->output->enable_profiler(TRUE);
+
 		
 	}
 }
