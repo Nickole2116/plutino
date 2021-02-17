@@ -31,5 +31,19 @@ class Admin extends CI_Controller {
 		$this->load->view('welcome_message');
 
 	}
+
+	public function approve_post()
+	{
+
+	}
 	
+	public function reject_post()
+	{
+
+	}
+
+	public function post_listing()
+	{
+		
+	}
 }

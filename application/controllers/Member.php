@@ -31,5 +31,32 @@ class Member extends CI_Controller {
 		$this->load->view('welcome_message');
 
 	}
+
+	public function home()
+	{
+
+	}
+
+	public function list()
+	{
+
+	}
+
+	public function post()
+	{
+
+	}
+
+	public function p_comment()
+	{
+
+	}
+
+	public function logout()
+	{
+
+	}
+
+
 	
 }
