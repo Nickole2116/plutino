@@ -34,7 +34,7 @@ switch (ENVIRONMENT)
 		$config['base_url'] = "https://".$_SERVER['SERVER_NAME']."/plutino/";
 		break;
 	default:
-		$config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/plutino/';
+		$config['base_url'] = 'https://'.$_SERVER['SERVER_NAME'].'/plutino/';
 	break;
 }
 
