@@ -29,8 +29,8 @@ class Welcome extends CI_Controller {
 	}
 	public function index()
 	{
-		$this->load->view('member/welcome');
-		$this->output->enable_profiler(TRUE);
+		$this->load->view('member/coming_soon');
+		//$this->output->enable_profiler(TRUE);
 
 
 	}
