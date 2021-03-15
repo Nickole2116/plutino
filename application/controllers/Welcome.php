@@ -31,6 +31,15 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('member/coming_soon');
 		//$this->output->enable_profiler(TRUE);
+		/*$status = $this->session->userdata('members');
+		if($status !="0")
+		{
+			redirect('member');
+		}else 
+		{
+			$this->login();
+
+		}*/
 
 
 	}
@@ -47,14 +56,15 @@ class Welcome extends CI_Controller {
 	public function login()
 	{
 		$data = array();
-		$this->load->view('member/home',$data);
-		$this->output->enable_profiler(TRUE);
+		$this->load->view('member/login',$data);
+		//$this->output->enable_profiler(TRUE);
 		
 	}
 
 	public function p_login()
 	{
 		$this->load->model("welcome_mod","welcome");
+		//$helper = $this->load->helper('MY_functions');
 
 		$username = $this->input->post('txtusername');
 		$password = $this->input->post('txtpassword');
@@ -65,9 +75,20 @@ class Welcome extends CI_Controller {
 		$credentials = $welcome->p_member_login($username,$password);
 		/**SET SESSION ID */
 		$this->session->set_flashdata('members',$credentials);
+
+		if($credentials > 0)
+		{
+			redirect('member/home',$data);
+			
+		}else 
+		{
+			$this->load->view('member/err_login',$data);
+
+		}
+
 		
-		$this->load->view('member/home',$data);
-		$this->output->enable_profiler(TRUE);
+		//$this->load->view('member/home',$data);
+		//$this->output->enable_profiler(TRUE);
 
 		
 	}
