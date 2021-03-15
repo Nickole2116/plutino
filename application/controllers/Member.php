@@ -28,19 +28,18 @@ class Member extends CI_Controller {
 	}
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->home();
 
 	}
 
 	public function home()
 	{
+		$data = array();
+		$this->load->view('member/home',$data);
+		//$this->output->enable_profiler(TRUE);
 
 	}
 
-	public function list()
-	{
-
-	}
 
 	public function post()
 	{

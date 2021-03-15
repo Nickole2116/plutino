@@ -48,7 +48,7 @@ class Welcome_mod extends CI_Model
     {
         //encrypt the password
         $encrypt_password = $this->my_function->log_encrypt_string($member_password);
- 
+
         $this->db->where('members_username',$member_username);
         $this->db->where('members_password_salt',$encrypt_password);
         $trx_account = $this->db->count_all_results('members');
@@ -78,6 +78,7 @@ class Welcome_mod extends CI_Model
     public function p_member_register($member_username,$member_password)
     {
         //encrypt the password
+        
         $encrypt_password = $this->my_function->log_encrypt_string($member_password);
  
         $this->db->where('members_username',$member_username);
