@@ -23,7 +23,7 @@
                 <p id="demo_mb2" style="color:black;font-family: 'Exo', sans-serif;line-height:1.75;text-align:center;margin:20% 0 10px 0; font-size:20px;letter-spacing:2px;font-weight:300">1,473 miles (2,370 kms)</p>
             </div>
             <br>
-            <h1 style="color:white;font-family: 'Exo', sans-serif;text-align:center;text-transform:uppercase;letter-spacing:4px">Pluto</h1>
+            <h1 style="color:white;font-family: 'Exo', sans-serif;text-align:center;text-transform:uppercase;letter-spacing:4px">Plutino's</h1>
             </div>
         </div>
         <div class="row">
@@ -41,6 +41,11 @@
 </svg> &nbsp;Join</button>
 
                 </form>
+
+                <br>
+
+                <a href="<?=base_url('welcome/register')?>"><h6 style="color:white;">Sign Up New Astronaut</h6></a><br>
+
             </div>
             
             </div>
@@ -63,7 +68,7 @@
                 <p id="demo_mb2" style="color:white;font-family: 'Exo', sans-serif;line-height:1.75;text-align:center;margin:20% 0 10px 0; font-size:20px;letter-spacing:2px;font-weight:300">1,473 miles (2,370 kms)</p>
             </div>
             <br>
-            <h1 style="color:white;font-family: 'Exo', sans-serif;text-align:center;text-transform:uppercase;letter-spacing:4px">Pluto</h1>
+            <h1 style="color:white;font-family: 'Exo', sans-serif;text-align:center;text-transform:uppercase;letter-spacing:4px">Plutino's</h1>
             </div>
         </div>
         <div class="row">
@@ -71,9 +76,9 @@
             <div style="margin-top:40%;color:#d9d9d9;text-align:center">
                 <form method="post" action="<?= base_url('welcome/p_login_mb')?>">
                     <small>Enter your credentials</small>
-                    <input type="text" name="txtname" placeholder="Username" style="font-size:12px;letter-spacing:0.3em;text-align:center;background: linear-gradient(to bottom, rgba(255, 250, 225, 0.2), rgba(255, 250, 225, 0.2));border:none;width:80%;border-radius:5px;padding:10px 10px;color:white" required>
+                    <input type="text" name="txtname_mb" placeholder="Username" style="font-size:12px;letter-spacing:0.3em;text-align:center;background: linear-gradient(to bottom, rgba(255, 250, 225, 0.2), rgba(255, 250, 225, 0.2));border:none;width:80%;border-radius:5px;padding:10px 10px;color:white" required>
                     <br><br>
-                    <input type="password" name="txtpassword" placeholder="Password" style="font-size:12px;letter-spacing:0.2em;text-align:center;background: linear-gradient(to bottom, rgba(255, 250, 225, 0.2), rgba(255, 250, 225, 0.2));border:none;width:80%;border-radius:5px;padding:10px 10px;color:white" required>
+                    <input type="password" name="txtpassword_mb" placeholder="Password" style="font-size:12px;letter-spacing:0.2em;text-align:center;background: linear-gradient(to bottom, rgba(255, 250, 225, 0.2), rgba(255, 250, 225, 0.2));border:none;width:80%;border-radius:5px;padding:10px 10px;color:white" required>
 
                     <br><br><br>
                     <button type="submit" style="width:auto;background:rgba(255,255,255,0.8);border:none;border-radius:30px;padding:10px 30px;letter-spacing:1.75px"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-slack" viewBox="0 0 16 16">
@@ -81,6 +86,9 @@
 </svg> &nbsp;Join</button>
 
                 </form>
+                <br>
+                <a href="<?=base_url('welcome/register')?>"><h6 style="color:white;">Sign Up New Astronaut</h6></a><br>
+
             </div>
             </div>
         </div>
