@@ -42,6 +42,11 @@ class MY_Function
         return $decryption;
 
     }
+
+    function generated_new_date()
+    {
+        return date('Y-m-d H:i:s');
+    }
 }
 
 
