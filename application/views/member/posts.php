@@ -57,11 +57,10 @@
                                          <br>
                                          <small>Choose your planet type</small>
                                          <select name="planet_type" style="width:100%;background:rgba(255,255,255,0.3);color:white;text-align:center;font-size:1.5em">
-                                             <option value="1">Nix</option>
-                                             <option value="2">Kerberos</option>
-                                             <option value="3">Charon</option>
-                                             <option value="4">Hydra</option>
-                                             <option value="5">Styx</option>
+                                            <option value="1">Orcus (Working Stress)</option>
+                                             <option value="2">Ixion (Student's Stress)</option>
+                                             <option value="3">Huya (Relationships)</option>
+                                             <option value="4">Rhadamanthus (Life)</option>
                                          </select>
                                          <br>
                                          <small>Your Post:</small>
@@ -133,11 +132,10 @@
                                          <br>
                                          <small>Choose your planet type</small>
                                          <select name="planet_type" style="width:100%;background:rgba(255,255,255,0.3);color:white;text-align:center;font-size:1.5em">
-                                             <option value="1">Nix</option>
-                                             <option value="2">Kerberos</option>
-                                             <option value="3">Charon</option>
-                                             <option value="4">Hydra</option>
-                                             <option value="5">Styx</option>
+                                             <option value="1">Orcus (Working Stress)</option>
+                                             <option value="2">Ixion (Student's Stress)</option>
+                                             <option value="3">Huya (Relationships)</option>
+                                             <option value="4">Rhadamanthus (Life)</option>
                                          </select>
                                          <br>
                                          <small>Your Post:</small>

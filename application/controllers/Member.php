@@ -104,6 +104,117 @@ class Member extends CI_Controller {
 		//$this->load->view('member/home',$data);
 	}
 
+	public function category()
+	{
+		$members_id = $this->session->userdata('members');
+		$this->load->model("welcome_mod","welcome");
+		$welcome = new $this->welcome();
+		$data = array();
+		$data['list'] = $welcome->all_posts();
+		$data['user'] = $welcome->get_user($members_id);
+		$this->load->view('member/category',$data);
+
+	}
+
+	public function feedback()
+	{
+		$members_id = $this->session->userdata('members');
+		$this->load->model("welcome_mod","welcome");
+		$welcome = new $this->welcome();
+		$data = array();
+		$data['user'] = $welcome->get_user($members_id);
+		$this->load->view('member/feedback',$data);
+
+	}
+
+	public function p_feed()
+	{
+		$this->load->model("welcome_mod","welcome");
+		//$helper = $this->load->helper('MY_functions');
+
+		$mark = $this->input->post('opt_mark');
+		//$posts_created_date = $this->input->post('txtpassword');
+		$help = $this->input->post('opt_help');
+		$comment = $this->input->post('txtcomment');
+		$posts_likes = 0;
+
+		$welcome = new $this->welcome();
+		$log = $welcome->add_feedbacks($mark,$help,$comment);
+				$this->output->enable_profiler(TRUE);
+
+
+		
+		redirect('member/home');
+		
+	}
+
+	public function p_feed_mb()
+	{
+		$this->load->model("welcome_mod","welcome");
+		//$helper = $this->load->helper('MY_functions');
+
+		$mark = $this->input->post('opt_mark_mb');
+		//$posts_created_date = $this->input->post('txtpassword');
+		$help = $this->input->post('opt_help_mb');
+		$comment = $this->input->post('txtcomment_mb');
+		$posts_likes = 0;
+
+		$welcome = new $this->welcome();
+		$log = $welcome->add_feedbacks($mark,$help,$comment);
+
+		
+		redirect('member/home');
+		
+	}
+
+	public function planet1()
+	{
+		$members_id = $this->session->userdata('members');
+		$this->load->model("welcome_mod","welcome");
+		$welcome = new $this->welcome();
+		$data = array();
+		$data['list'] = $welcome->get_posts(1);
+		$data['user'] = $welcome->get_user($members_id);
+		$this->load->view('member/planet1',$data);
+
+	}
+
+	public function planet2()
+	{
+		$members_id = $this->session->userdata('members');
+		$this->load->model("welcome_mod","welcome");
+		$welcome = new $this->welcome();
+		$data = array();
+		$data['list'] = $welcome->get_posts(2);
+		$data['user'] = $welcome->get_user($members_id);
+		$this->load->view('member/planet2',$data);
+
+	}
+
+	public function planet3()
+	{
+		$members_id = $this->session->userdata('members');
+		$this->load->model("welcome_mod","welcome");
+		$welcome = new $this->welcome();
+		$data = array();
+		$data['list'] = $welcome->get_posts(3);
+		$data['user'] = $welcome->get_user($members_id);
+		$this->load->view('member/planet3',$data);
+
+	}
+
+	public function planet4()
+	{
+		$members_id = $this->session->userdata('members');
+		$this->load->model("welcome_mod","welcome");
+		$welcome = new $this->welcome();
+		$data = array();
+		$data['list'] = $welcome->get_posts(4);
+		$data['user'] = $welcome->get_user($members_id);
+		$this->load->view('member/planet4',$data);
+
+	}
+
 	
 
 	public function p_comment()

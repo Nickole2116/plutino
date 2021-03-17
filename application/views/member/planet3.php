@@ -15,7 +15,7 @@
 <body style="background:#000;color:#fff">
 <!--For Web-->
 <div class="web-view">
-<div style="background-image:url('<?php echo base_url('inc/img/Astronaut_Floating_Space.png')?>');background-repeat:no-repeat;background-size:100%;min-height:990px;">
+<div style="background-image:url('<?php echo base_url('inc/img/Huya-main.webp')?>');background-repeat:no-repeat;background-size:100%;min-height:990px;">
     <div class="container-fluid">
         <div class="row">
             <div class="col-6 col-xs-6 col-sm-6 col-lg-6" style="text-align:left;background:rgba(0,0,0,0.3);">
@@ -76,43 +76,43 @@
                     </div>
                     <br>
                     <div class="row">
-
                         <div class="col-12 col-xs-12 col-sm-3 col-col-lg-3">
-                            </div>
-                            <div class="col-12 col-xs-12 col-sm-6 col-col-lg-6">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-6 col-xs-6 xol-6 col-lg-6">
-                                            <a href="<?=base_url('member/planet1');?>">
-                                                <div style="text-align:center;background:rgba(0,0,0,0.5);color:white;padding:40px 20px;border:1.5px solid white;border-radius:10px">Orcus (Working Stress)</div>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-xs-6 xol-6 col-lg-6">
-                                            <a href="<?=base_url('member/planet2');?>">
-                                                <div style="text-align:center;background:rgba(0,0,0,0.5);color:white;padding:40px 20px;border:1.5px solid white;border-radius:10px">Ixion (Student's Stress)</div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-6 col-xs-6 xol-6 col-lg-6">
-                                            <a href="<?=base_url('member/planet3');?>">
-                                                <div style="text-align:center;background:rgba(0,0,0,0.5);color:white;padding:40px 20px;border:1.5px solid white;border-radius:10px">Huya (Relationships)</div>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-xs-6 xol-6 col-lg-6">
-                                            <a href="<?=base_url('member/planet4');?>">
-                                                <div style="text-align:center;background:rgba(0,0,0,0.5);color:white;padding:40px 20px;border:1.5px solid white;border-radius:10px">Rhadamanthus (Life Stress)</div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-xs-12 col-sm-3 col-col-lg-3">
-                            </div>
+                        </div>
+                        <div class="col-12 col-xs-12 col-sm-6 col-col-lg-6">
+                                    <?//echo print_r($list[0]['posts_id']);
+                                    for($i=0;$i<count($list);$i++)
+                                    {
+                                        //echo print_r($list[$i]);
+                                        ?>
 
-                      
-                        
+                            <div style="background:rgba(255,255,255,0.8);border-radius:10px;color:#000;font-family: 'Nunito', sans-serif;">
+                                <small><?=$list[$i]['posts_created_date']?></small>
+                                <div style="background:#d9d9d9;height:1.5px"></div>
+                                <div style="font-family: 'Nunito', sans-serif;font-size:14px;padding:15px"><?=$list[$i]['posts_msg']?>
+                                <br><br>
+                                <div style="font-family: 'Nunito', sans-serif;font-weight:600"><mark style="border-radius:13px;">&nbsp;From Astronaut #<?=$list[$i]['ast_no']?>&nbsp;</mark></div></div>
+
+                                   
+
+                                 <div class="container-fluid">
+                                     <div class="row">
+                                         <div class="col-12 col-xs-12 col-sm-12 col-lg-12" style="padding-top:20px;padding-bottom:20px;border-top:1px solid rgba(0,0,0,0.2)">
+                                            <button id="btn_<?=$list[$i]['posts_id']?>" onclick="like_post(<?=$list[$i]['posts_id']?>,<?=$list[$i]['likes']?>)" style="border:none;background:rgba(0,0,0,0.4);width:100%;border-radius:15px;color:white">I understand you (<span id="likes_count_<?=$list[$i]['posts_id']?>"><?=$list[$i]['likes']?></span>)</button>
+                                         </div>
+                                     </div>
+                                 </div>
+
+                            </div>
+                            <br>
+
+
+                                        <?
+                                    }
+                                    ?>
+                            
+                        </div>
+                        <div class="col-12 col-xs-12 col-sm-3 col-col-lg-3">
+                        </div>
                     </div>
                 </div>
                 
@@ -195,6 +195,16 @@
 </svg> &nbsp;&nbsp;Write down your story...
                                 </div>
                             </a>
+                            <br>
+                            <a href="<?php echo base_url('member/feedback');?>">
+                                <div style="padding:5px 5px;color:white;border:1px solid white;border-radius:10px">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-journal-check" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+                    </svg> &nbsp;&nbsp;<small>Rate the Website ?</small>
+                                </div>
+                            </a>
                         </div>
                         <div class="col-12 col-xs-12 col-sm-3 col-col-lg-3">
                         </div>
@@ -205,42 +215,42 @@
 
                     <div class="row">
                     <div class="col-12 col-xs-12 col-sm-3 col-col-lg-3">
+                        </div>
+                        <div class="col-12 col-xs-12 col-sm-6 col-col-lg-6">
+                                    <?//echo print_r($list[0]['posts_id']);
+                                    for($i=0;$i<count($list);$i++)
+                                    {
+                                        //echo print_r($list[$i]);
+                                        ?>
+
+                            <div style="background:rgba(255,255,255,0.8);border-radius:10px;color:#000;font-family: 'Nunito', sans-serif;">
+                                <small><?=$list[$i]['posts_created_date']?></small>
+                                <div style="background:#d9d9d9;height:1.5px"></div>
+                                <div style="font-family: 'Nunito', sans-serif;font-size:14px;padding:15px"><?=$list[$i]['posts_msg']?>
+                                <br><br>
+                                <div style="font-family: 'Nunito', sans-serif;font-weight:600"><mark style="border-radius:13px;">&nbsp;From Astronaut #<?=$list[$i]['ast_no']?>&nbsp;</mark></div></div>
+
+                                   
+
+                                 <div class="container-fluid">
+                                     <div class="row">
+                                         <div class="col-12 col-xs-12 col-sm-12 col-lg-12" style="padding-top:20px;padding-bottom:20px;border-top:1px solid rgba(0,0,0,0.2)">
+                                            <button id="btn_<?=$list[$i]['posts_id']?>" onclick="like_post(<?=$list[$i]['posts_id']?>,<?=$list[$i]['likes']?>)" style="border:none;background:rgba(0,0,0,0.4);width:100%;border-radius:15px;color:white">I understand you (<span id="likes_count_<?=$list[$i]['posts_id']?>"><?=$list[$i]['likes']?></span>)</button>
+                                         </div>
+                                     </div>
+                                 </div>
+
                             </div>
-                            <div class="col-12 col-xs-12 col-sm-6 col-col-lg-6">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-12 col-xs-12 col-12 col-lg-12">
-                                            <a href="<?=base_url('member/planet1');?>">
-                                                <div style="text-align:center;background:rgba(0,0,0,0.5);color:white;padding:40px 20px;border:1.5px solid white;border-radius:10px">Orcus (Working Stress)</div>
-                                            </a>
-                                            <br>
-                                        </div>
-                                        <br>
-                                        <div class="col-12 col-xs-12 col-12 col-lg-12">
-                                            <a href="<?=base_url('member/planet2');?>">
-                                                <div style="text-align:center;background:rgba(0,0,0,0.5);color:white;padding:40px 20px;border:1.5px solid white;border-radius:10px">Ixion (Student's Stress)</div>
-                                            </a>
-                                            <br>
-                                        </div>
-                                        <br>
-                                        <div class="col-12 col-xs-12 col-12 col-lg-12">
-                                            <a href="<?=base_url('member/planet3');?>">
-                                                <div style="text-align:center;background:rgba(0,0,0,0.5);color:white;padding:40px 20px;border:1.5px solid white;border-radius:10px">Huya (Relationships)</div>
-                                            </a>
-                                            <br>
-                                        </div>
-                                        <br>
-                                        <div class="col-12 col-xs-12 col-12 col-lg-12">
-                                            <a href="<?=base_url('member/planet4');?>">
-                                                <div style="text-align:center;background:rgba(0,0,0,0.5);color:white;padding:40px 20px;border:1.5px solid white;border-radius:10px">Rhadamanthus (Life Stress)</div>
-                                            </a>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-xs-12 col-sm-3 col-col-lg-3">
-                            </div>
+                            <br>
+
+
+                                        <?
+                                    }
+                                    ?>
+                            
+                        </div>
+                        <div class="col-12 col-xs-12 col-sm-3 col-col-lg-3">
+                        </div>
                     </div>
                 </div>
                 

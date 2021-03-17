@@ -15,7 +15,7 @@
 <body style="background:#000;color:#fff">
 <!--For Web-->
 <div class="web-view">
-<div style="background-image:url('<?php echo base_url('inc/img/Astronaut_Floating_Space.png')?>');background-repeat:no-repeat;background-size:100%;min-height:990px;">
+<div style="background-image:url('<?php echo base_url('inc/img/plutinos/BG-01-WB.jpg')?>');background-repeat:no-repeat;background-size:100%;min-height:990px;">
     <div class="container-fluid">
         <div class="row">
             <div class="col-6 col-xs-6 col-sm-6 col-lg-6" style="text-align:left;background:rgba(0,0,0,0.3);">
@@ -76,43 +76,43 @@
                     </div>
                     <br>
                     <div class="row">
-
                         <div class="col-12 col-xs-12 col-sm-3 col-col-lg-3">
-                            </div>
-                            <div class="col-12 col-xs-12 col-sm-6 col-col-lg-6">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-6 col-xs-6 xol-6 col-lg-6">
-                                            <a href="<?=base_url('member/planet1');?>">
-                                                <div style="text-align:center;background:rgba(0,0,0,0.5);color:white;padding:40px 20px;border:1.5px solid white;border-radius:10px">Orcus (Working Stress)</div>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-xs-6 xol-6 col-lg-6">
-                                            <a href="<?=base_url('member/planet2');?>">
-                                                <div style="text-align:center;background:rgba(0,0,0,0.5);color:white;padding:40px 20px;border:1.5px solid white;border-radius:10px">Ixion (Student's Stress)</div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <div class="col-6 col-xs-6 xol-6 col-lg-6">
-                                            <a href="<?=base_url('member/planet3');?>">
-                                                <div style="text-align:center;background:rgba(0,0,0,0.5);color:white;padding:40px 20px;border:1.5px solid white;border-radius:10px">Huya (Relationships)</div>
-                                            </a>
-                                        </div>
-                                        <div class="col-6 col-xs-6 xol-6 col-lg-6">
-                                            <a href="<?=base_url('member/planet4');?>">
-                                                <div style="text-align:center;background:rgba(0,0,0,0.5);color:white;padding:40px 20px;border:1.5px solid white;border-radius:10px">Rhadamanthus (Life Stress)</div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-xs-12 col-sm-3 col-col-lg-3">
-                            </div>
+                        </div>
+                        <div class="col-12 col-xs-12 col-sm-6 col-col-lg-6">
+                                    <?//echo print_r($list[0]['posts_id']);
+                                    for($i=0;$i<count($list);$i++)
+                                    {
+                                        //echo print_r($list[$i]);
+                                        ?>
 
-                      
-                        
+                            <div style="background:rgba(255,255,255,0.8);border-radius:10px;color:#000;font-family: 'Nunito', sans-serif;">
+                                <small><?=$list[$i]['posts_created_date']?></small>
+                                <div style="background:#d9d9d9;height:1.5px"></div>
+                                <div style="font-family: 'Nunito', sans-serif;font-size:14px;padding:15px"><?=$list[$i]['posts_msg']?>
+                                <br><br>
+                                <div style="font-family: 'Nunito', sans-serif;font-weight:600"><mark style="border-radius:13px;">&nbsp;From Astronaut #<?=$list[$i]['ast_no']?>&nbsp;</mark></div></div>
+
+                                   
+
+                                 <div class="container-fluid">
+                                     <div class="row">
+                                         <div class="col-12 col-xs-12 col-sm-12 col-lg-12" style="padding-top:20px;padding-bottom:20px;border-top:1px solid rgba(0,0,0,0.2)">
+                                            <button id="btn_<?=$list[$i]['posts_id']?>" onclick="like_post(<?=$list[$i]['posts_id']?>,<?=$list[$i]['likes']?>)" style="border:none;background:rgba(0,0,0,0.4);width:100%;border-radius:15px;color:white">I understand you (<span id="likes_count_<?=$list[$i]['posts_id']?>"><?=$list[$i]['likes']?></span>)</button>
+                                         </div>
+                                     </div>
+                                 </div>
+
+                            </div>
+                            <br>
+
+
+                                        <?
+                                    }
+                                    ?>
+                            
+                        </div>
+                        <div class="col-12 col-xs-12 col-sm-3 col-col-lg-3">
+                        </div>
                     </div>
                 </div>
                 
@@ -125,7 +125,7 @@
 
 <!--For Mobile-->
 <div class="mob-view">
-<div style="background-image:url('<?php echo base_url('inc/img/astronuat.jpg')?>');background-position:right;background-repeat:no-repeat;background-size:auto 100%;min-height:990px;">
+<div style="background-image:url('<?php echo base_url('inc/img/plutinos/BG-01-MB.jpg')?>');background-repeat:no-repeat;background-size:auto 100%;min-height:990px;">
 <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-xs-12 col-sm-12 col-lg-12" style="text-align:center;background:rgba(0,0,0,0.3);">
@@ -149,14 +149,14 @@
                 <div class="container-fluid">
                     <div class="row" style="text-align:center">
                         <div class="col-3 col-sm-3 col-xs-3 col-lg-3">
-                            <a href="<?=base_url('member/planet1')?>"><div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-file-earmark-zip-fill" viewBox="0 0 16 16">
+                        <a href="<?=base_url('member/planet1')?>"><div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-file-earmark-zip-fill" viewBox="0 0 16 16">
                                 <path d="M5.5 9.438V8.5h1v.938a1 1 0 0 0 .03.243l.4 1.598-.93.62-.93-.62.4-1.598a1 1 0 0 0 .03-.243z"/>
                                 <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zm-4-.5V2h-1V1H6v1h1v1H6v1h1v1H6v1h1v1H5.5V6h-1V5h1V4h-1V3h1zm0 4.5h1a1 1 0 0 1 1 1v.938l.4 1.599a1 1 0 0 1-.416 1.074l-.93.62a1 1 0 0 1-1.109 0l-.93-.62a1 1 0 0 1-.415-1.074l.4-1.599V8.5a1 1 0 0 1 1-1z"/>
                                 </svg></div>
                             <small>Working</small></a>
                         </div>
                         <div class="col-3 col-sm-3 col-xs-3 col-lg-3">
-                        <a href="<?=base_url('member/planet2')?>"><div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-book-fill" viewBox="0 0 16 16">
+                        <a href="<?=base_url('member/planet2')?>"><div ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-book-fill" viewBox="0 0 16 16">
                             <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
                             </svg></div>
                             <small>Students</small></a>
@@ -168,7 +168,7 @@
                             <small>Relationship</small></a>
                         </div>
                         <div class="col-3 col-sm-3 col-xs-3 col-lg-3">
-                        <a href="<?=base_url('member/planet4')?>"><div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-award" viewBox="0 0 16 16">
+                        <a href="<?=base_url('member/planet4')?>"><div ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-award" viewBox="0 0 16 16">
                             <path d="M9.669.864L8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193l.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702 1.509.229z"/>
                             <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
                             </svg></div>
@@ -176,6 +176,7 @@
                         </div>
                     </div>
                     <br>
+                    
                 </div>
                 
             </div>
@@ -195,6 +196,18 @@
 </svg> &nbsp;&nbsp;Write down your story...
                                 </div>
                             </a>
+                            <br>
+                            <a href="<?php echo base_url('member/feedback');?>">
+                                <div style="padding:5px 5px;color:white;border:1px solid white;border-radius:10px">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-journal-check" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+                    </svg> &nbsp;&nbsp;<small>Rate the Website ?</small>
+                                </div>
+                            </a>
+
+
                         </div>
                         <div class="col-12 col-xs-12 col-sm-3 col-col-lg-3">
                         </div>
@@ -205,42 +218,42 @@
 
                     <div class="row">
                     <div class="col-12 col-xs-12 col-sm-3 col-col-lg-3">
+                        </div>
+                        <div class="col-12 col-xs-12 col-sm-6 col-col-lg-6">
+                                    <?//echo print_r($list[0]['posts_id']);
+                                    for($i=0;$i<count($list);$i++)
+                                    {
+                                        //echo print_r($list[$i]);
+                                        ?>
+
+                            <div style="background:rgba(255,255,255,0.8);border-radius:10px;color:#000;font-family: 'Nunito', sans-serif;">
+                                <small><?=$list[$i]['posts_created_date']?></small>
+                                <div style="background:#d9d9d9;height:1.5px"></div>
+                                <div style="font-family: 'Nunito', sans-serif;font-size:14px;padding:15px"><?=$list[$i]['posts_msg']?>
+                                <br><br>
+                                <div style="font-family: 'Nunito', sans-serif;font-weight:600"><mark style="border-radius:13px;">&nbsp;From Astronaut #<?=$list[$i]['ast_no']?>&nbsp;</mark></div></div>
+
+                                   
+
+                                 <div class="container-fluid">
+                                     <div class="row">
+                                         <div class="col-12 col-xs-12 col-sm-12 col-lg-12" style="padding-top:20px;padding-bottom:20px;border-top:1px solid rgba(0,0,0,0.2)">
+                                            <button id="sbtn_<?=$list[$i]['posts_id']?>" onclick="like_post(<?=$list[$i]['posts_id']?>,<?=$list[$i]['likes']?>)" style="border:none;background:rgba(0,0,0,0.4);width:100%;border-radius:15px;color:white">I understand you (<span id="likes_count_<?=$list[$i]['posts_id']?>"><?=$list[$i]['likes']?></span>)</button>
+                                         </div>
+                                     </div>
+                                 </div>
+
                             </div>
-                            <div class="col-12 col-xs-12 col-sm-6 col-col-lg-6">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-12 col-xs-12 col-12 col-lg-12">
-                                            <a href="<?=base_url('member/planet1');?>">
-                                                <div style="text-align:center;background:rgba(0,0,0,0.5);color:white;padding:40px 20px;border:1.5px solid white;border-radius:10px">Orcus (Working Stress)</div>
-                                            </a>
-                                            <br>
-                                        </div>
-                                        <br>
-                                        <div class="col-12 col-xs-12 col-12 col-lg-12">
-                                            <a href="<?=base_url('member/planet2');?>">
-                                                <div style="text-align:center;background:rgba(0,0,0,0.5);color:white;padding:40px 20px;border:1.5px solid white;border-radius:10px">Ixion (Student's Stress)</div>
-                                            </a>
-                                            <br>
-                                        </div>
-                                        <br>
-                                        <div class="col-12 col-xs-12 col-12 col-lg-12">
-                                            <a href="<?=base_url('member/planet3');?>">
-                                                <div style="text-align:center;background:rgba(0,0,0,0.5);color:white;padding:40px 20px;border:1.5px solid white;border-radius:10px">Huya (Relationships)</div>
-                                            </a>
-                                            <br>
-                                        </div>
-                                        <br>
-                                        <div class="col-12 col-xs-12 col-12 col-lg-12">
-                                            <a href="<?=base_url('member/planet4');?>">
-                                                <div style="text-align:center;background:rgba(0,0,0,0.5);color:white;padding:40px 20px;border:1.5px solid white;border-radius:10px">Rhadamanthus (Life Stress)</div>
-                                            </a>
-                                            <br>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-xs-12 col-sm-3 col-col-lg-3">
-                            </div>
+                            <br>
+
+
+                                        <?
+                                    }
+                                    ?>
+                            
+                        </div>
+                        <div class="col-12 col-xs-12 col-sm-3 col-col-lg-3">
+                        </div>
                     </div>
                 </div>
                 

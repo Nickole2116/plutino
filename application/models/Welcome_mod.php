@@ -168,11 +168,44 @@ class Welcome_mod extends CI_Model
 
     }
 
+    public function add_feedbacks($mark,$help,$comment)
+    {
+        //encrypt the password
+        
+        
+            $data = array(
+                "feedback_mark" => $mark,
+                "feedback_help" => $help,
+                "feedback_comment" => $comment,
+                "feedback_date" => date('Y-m-d H:i:s')
+
+
+            );
+
+            $this->db->insert("feedbacks",$data);
+            return $this->db->insert_id();
+
+        
+
+    }
+
     public function all_posts()
     {
         $this->db->select('*');
        $this->db->from('posts');
        $this->db->join('members', 'posts.members_id = members.members_id');
+       $this->db->order_by("posts_created_date", "desc");
+       return $this->db->get()->result_array();
+    }
+
+    public function get_posts($i)
+    {
+        $this->db->select('*');
+       $this->db->from('posts');
+       $this->db->join('members', 'posts.members_id = members.members_id');
+       $this->db->where('posts.planets_id', $i);
+       $this->db->order_by("posts_created_date", "desc");
+
        return $this->db->get()->result_array();
     }
 
